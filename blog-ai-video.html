@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How AI Video Is Changing the Game for Small Businesses — VibeHire Blog</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+[data-theme="light"]{--bg:#f7f5f0;--bg2:#ffffff;--bg3:#f0ede6;--surface:#ffffff;--surface2:#f7f5f0;--border:#e8e4dc;--text:#1a1814;--text2:#4a4640;--muted:#9a948a;--accent:#2d7a4f;--accent-light:#e8f5ee;--accent2:#c8861a;--accent2-light:#fdf3e3;--nav-bg:rgba(247,245,240,0.92);--shadow:0 2px 20px rgba(0,0,0,0.08);--shadow-lg:0 8px 40px rgba(0,0,0,0.12);}
+[data-theme="dark"]{--bg:#0f0f0d;--bg2:#161612;--bg3:#1c1c18;--surface:#1c1c18;--surface2:#242420;--border:#2e2e28;--text:#f0ede6;--text2:#b8b4ac;--muted:#6a6660;--accent:#4aaa72;--accent-light:#0f2a1a;--accent2:#e09a30;--accent2-light:#2a1e08;--nav-bg:rgba(15,15,13,0.92);--shadow:0 2px 20px rgba(0,0,0,0.3);--shadow-lg:0 8px 40px rgba(0,0,0,0.4);}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;transition:background 0.4s,color 0.4s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:var(--nav-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.35rem;color:var(--text);text-decoration:none;}
+.nav-logo span{color:var(--accent);}
+.nav-back{color:var(--text2);font-size:0.85rem;font-weight:500;text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--accent);}
+.nav-right{display:flex;align-items:center;gap:0.75rem;}
+.theme-toggle{width:38px;height:38px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:0.85rem;padding:0.55rem 1.3rem;border-radius:100px;text-decoration:none;}
+.blog-hero{padding:8rem 5% 3rem;max-width:780px;}
+.blog-cat{display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-light);color:var(--accent);font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.5rem;border:1px solid var(--accent)25;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.2rem;color:var(--text);}
+.blog-meta{display:flex;align-items:center;gap:1rem;font-size:0.85rem;color:var(--muted);margin-bottom:2rem;flex-wrap:wrap;}
+.blog-cover{width:100%;aspect-ratio:16/7;overflow:hidden;}
+.blog-cover img{width:100%;height:100%;object-fit:cover;}
+.blog-body{padding:4rem 5%;display:grid;grid-template-columns:1fr 280px;gap:4rem;max-width:1100px;}
+@media(max-width:860px){.blog-body{grid-template-columns:1fr;gap:2.5rem;}}
+.article h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;letter-spacing:-0.02em;margin:2.5rem 0 0.8rem;color:var(--text);}
+.article h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin:1.8rem 0 0.6rem;color:var(--text);}
+.article p{color:var(--text2);font-size:1rem;line-height:1.85;margin-bottom:1.2rem;}
+.article p strong{color:var(--text);font-weight:600;}
+.article ul,.article ol{margin:0 0 1.2rem 1.2rem;}
+.article ul li,.article ol li{color:var(--text2);font-size:0.97rem;line-height:1.75;margin-bottom:0.5rem;}
+.article blockquote{border-left:3px solid var(--accent);padding:1rem 1.5rem;margin:1.5rem 0;background:var(--accent-light);border-radius:0 12px 12px 0;}
+.article blockquote p{color:var(--text);font-style:italic;font-size:1.05rem;margin:0;}
+.article hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+.highlight-box{background:var(--accent2-light);border:1px solid var(--accent2)25;border-radius:16px;padding:1.5rem 1.8rem;margin:1.5rem 0;}
+.highlight-box h4{font-weight:700;color:var(--accent2);margin-bottom:0.5rem;font-size:0.9rem;letter-spacing:0.04em;text-transform:uppercase;}
+.highlight-box p{color:var(--text2);font-size:0.92rem;margin:0;line-height:1.65;}
+.comparison-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0;}
+@media(max-width:500px){.comparison-grid{grid-template-columns:1fr;}}
+.comp-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.2rem;}
+.comp-card.old{border-color:var(--border);}
+.comp-card.new{border-color:var(--accent)50;background:var(--accent-light);}
+.comp-card h4{font-weight:700;font-size:0.85rem;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.75rem;}
+.comp-card.old h4{color:var(--muted);}
+.comp-card.new h4{color:var(--accent);}
+.comp-card ul{list-style:none;}
+.comp-card ul li{font-size:0.88rem;color:var(--text2);padding:0.3rem 0;border-bottom:1px solid var(--border);}
+.comp-card ul li:last-child{border-bottom:none;}
+.blog-sidebar{position:sticky;top:6rem;align-self:start;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:1.5rem;box-shadow:var(--shadow);margin-bottom:1.2rem;}
+.sidebar-card h4{font-family:'Playfair Display',serif;font-weight:800;font-size:0.95rem;color:var(--text);margin-bottom:0.8rem;}
+.toc-list{list-style:none;}
+.toc-list li{padding:0.4rem 0;border-bottom:1px solid var(--border);}
+.toc-list li:last-child{border-bottom:none;}
+.toc-list a{color:var(--text2);font-size:0.85rem;text-decoration:none;transition:color 0.2s;}
+.toc-list a:hover{color:var(--accent);}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;background:var(--accent);color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.4rem;border-radius:100px;text-decoration:none;width:100%;margin-top:0.5rem;}
+.related{padding:3rem 5% 5rem;}
+.related h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:1.5rem;}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform 0.2s,box-shadow 0.2s;box-shadow:var(--shadow);}
+.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.related-thumb{aspect-ratio:16/9;overflow:hidden;}
+.related-thumb img{width:100%;height:100%;object-fit:cover;}
+.related-info{padding:1rem 1.2rem;}
+.related-cat{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.4rem;}
+.related-info h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:800;color:var(--text);line-height:1.3;}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 5%;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.footer-logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1rem;color:var(--text);}
+.footer-logo span{color:var(--accent);}
+footer p{color:var(--muted);font-size:0.82rem;}
+.footer-wa{display:inline-flex;align-items:center;gap:0.5rem;background:#e8f8ef;border:1px solid #25D36640;color:#25D366;font-size:0.85rem;font-weight:600;padding:0.45rem 1rem;border-radius:100px;text-decoration:none;}
+[data-theme="dark"] .footer-wa{background:#0d2b1a;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.blog-hero>*{animation:fadeUp 0.6s ease both;}
+.blog-hero>*:nth-child(1){animation-delay:0.05s;}.blog-hero>*:nth-child(2){animation-delay:0.12s;}.blog-hero>*:nth-child(3){animation-delay:0.2s;}
+@media(max-width:600px){nav{padding:0.85rem 4%;}.nav-cta{display:none;}.blog-hero{padding:5.5rem 4% 2.5rem;}.blog-body{padding:3rem 4%;}.related{padding:2rem 4% 3.5rem;}footer{flex-direction:column;padding:1.5rem 4%;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><span>Vibe</span>Hire</a>
+  <a class="nav-back" href="index.html#blog">← Back to Blog</a>
+  <div class="nav-right">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+    <a class="nav-cta" href="https://wa.me/60XXXXXXXXX?text=Hi%20VibeHire!" target="_blank">💬 Work With Us</a>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-cat">🎬 AI Video</div>
+  <h1>How AI Video Production Is Changing the Game for Small Businesses</h1>
+  <div class="blog-meta">
+    <span>📅 2025</span>
+    <span>⏱ 6 min read</span>
+    <span>✍️ VibeHire Editorial</span>
+  </div>
+</div>
+<div class="blog-cover"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1400&q=80" alt="AI Video Production"/></div>
+
+<div class="blog-body">
+  <article class="article">
+    <p>Not long ago, producing a professional video for your business meant hiring a videographer, a scriptwriter, a voice artist, and an editor. It meant booking studio time, scheduling shoots, and waiting weeks for a final product — all for a cost that most small businesses simply couldn't justify.</p>
+    <p>Today, that's changing. And it's changing fast.</p>
+
+    <h2>What Has Actually Changed</h2>
+    <p>The tools available for video production have shifted dramatically in the past few years. AI-powered platforms can now generate realistic voiceovers in multiple languages, create visual sequences from scripts, and automate much of the editing process that previously required specialist skills.</p>
+    <p>But here's the part most people miss: <strong>the tools alone don't make a great video.</strong> Knowing how to use them — knowing what story to tell, how to structure a script, what tone fits your audience, and how to edit for maximum impact — still requires human judgment and experience.</p>
+    <p>What AI has changed is the cost and speed of production. The creative and strategic thinking still matters. It's just faster and more affordable to execute now.</p>
+
+    <h2>The Old Way vs The New Way</h2>
+    <div class="comparison-grid">
+      <div class="comp-card old">
+        <h4>Traditional Video Production</h4>
+        <ul>
+          <li>RM3,000–RM15,000 per video</li>
+          <li>2–6 weeks turnaround</li>
+          <li>Multiple vendors to coordinate</li>
+          <li>Requires on-site filming</li>
+          <li>Revisions are expensive</li>
+          <li>One video, high cost</li>
+        </ul>
+      </div>
+      <div class="comp-card new">
+        <h4>AI-Powered Video Production</h4>
+        <ul>
+          <li>From RM500 per video</li>
+          <li>10 working days turnaround</li>
+          <li>One partner handles everything</li>
+          <li>No on-site filming needed</li>
+          <li>Revisions built into the process</li>
+          <li>Consistent output at scale</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Why Consistency Matters More Than Perfection</h2>
+    <p>Here's something most marketing advice gets wrong — businesses don't fail at video content because their videos aren't good enough. They fail because they produce one or two videos, don't see immediate results, and stop.</p>
+    <p>Social media algorithms reward consistency. Audiences trust brands they see regularly. One great video posted once does far less than eight decent videos posted consistently over two months.</p>
+    <p>This is where AI video production changes the equation for small businesses. When the cost per video drops from RM5,000 to RM500, consistency becomes possible. You can maintain a presence on Instagram, TikTok, and YouTube without breaking your budget.</p>
+
+    <blockquote>
+      <p>The businesses winning on social media right now aren't the ones with the biggest budgets. They're the ones showing up most consistently.</p>
+    </blockquote>
+
+    <h2>What AI Video Production Actually Looks Like</h2>
+    <p>There's a lot of mystery around what "AI video production" actually means in practice. Here's how VibeHire approaches it — and what the process looks like for a typical client.</p>
+    <ul>
+      <li><strong>Brief:</strong> The client tells us about their business, their audience, and the goal of the video — using an AI-assisted brief process that takes less than 10 minutes.</li>
+      <li><strong>Storyboard & Script:</strong> We develop a structured storyboard and script based on the brief, designed to communicate the key message clearly and compellingly.</li>
+      <li><strong>AI Narration:</strong> We generate professional-quality voiceover in the required language — Bahasa Malaysia, English, or bilingual — without needing to hire a voice artist.</li>
+      <li><strong>Video Editing:</strong> Visuals, motion graphics, text overlays, and music are assembled into a polished, ready-to-post video.</li>
+      <li><strong>Delivery:</strong> The finished video is delivered within 10 working days, formatted for the platforms the client uses.</li>
+    </ul>
+
+    <h2>Who Benefits Most From This Approach</h2>
+    <p>AI video production isn't the right fit for every use case. If you need live footage of your physical space, your team, or a specific event — traditional videography still has its place.</p>
+    <p>But for the vast majority of content that local businesses actually need — product explainers, service promos, educational content, social media ads, internal training, brand awareness videos — AI production delivers the same impact at a fraction of the cost.</p>
+    <p>The businesses that benefit most are those who need to produce video content regularly but can't justify a large production budget for every piece. MSMEs, professional service firms, financial services companies, healthcare providers, retailers — anyone who needs to communicate consistently with their audience online.</p>
+
+    <h2>The VibeHire Approach</h2>
+    <p>At VibeHire, we use AI as the engine — but the strategy, storytelling, and quality control are all human. We don't just generate videos and hand them over. We think about what each video needs to achieve, who it's speaking to, and what the call to action should be.</p>
+    <p>Our work with DWS2U is a good example. They needed education videos that explain will writing clearly to Malaysians who know little about the topic, marketing videos that drive action on social media, and internal training content for their team — all consistent in tone and quality, all produced affordably and on schedule.</p>
+    <p>That's what AI-powered production makes possible when it's used with proper intent and direction.</p>
+
+    <div class="highlight-box">
+      <h4>🎬 Want to See It in Action?</h4>
+      <p>Read the DWS2U case study to see how VibeHire produces consistent AI video content for a Malaysian financial services client — across three different content types, on two different platforms.</p>
+    </div>
+
+  </article>
+
+  <aside class="blog-sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list">
+        <li><a href="#">What Has Changed</a></li>
+        <li><a href="#">Old vs New Way</a></li>
+        <li><a href="#">Why Consistency Matters</a></li>
+        <li><a href="#">What It Looks Like</a></li>
+        <li><a href="#">Who Benefits Most</a></li>
+        <li><a href="#">The VibeHire Approach</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Get Your First Video</h4>
+      <p style="font-size:0.85rem;color:var(--text2);line-height:1.6;margin-bottom:0.5rem;">From RM500 per video. Storyboard, script, AI narration, and editing — all included.</p>
+      <a class="btn-primary" href="video.html">See Pricing →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Case Study</h4>
+      <p style="font-size:0.85rem;color:var(--text2);line-height:1.6;margin-bottom:0.75rem;">See how VibeHire produces consistent AI video content for DWS2U — Malaysia's Will Writing platform.</p>
+      <a href="portfolio-dws2u.html" style="font-size:0.85rem;color:var(--accent);font-weight:700;text-decoration:none;">Read the Case Study →</a>
+    </div>
+  </aside>
+</div>
+
+<div class="related">
+  <h3>More From the Blog</h3>
+  <div class="related-grid">
+    <a class="related-card" href="blog-will-writing.html">
+      <div class="related-thumb"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Will Writing"/></div>
+      <div class="related-info"><div class="related-cat">Financial Literacy</div><h4>Why Every Malaysian Needs a Will — And Why Most Don't Have One</h4></div>
+    </a>
+    <a class="related-card" href="blog-why-custom-website.html">
+      <div class="related-thumb"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80" alt="Website"/></div>
+      <div class="related-info"><div class="related-cat">Website</div><h4>Why Your Business Needs a Custom Website — Not a Template</h4></div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"><span>Vibe</span>Hire Solutions Sdn. Bhd.</div>
+  <p>© 2025 VibeHire Solutions Sdn. Bhd. · Made in Malaysia 🇲🇾</p>
+  <a class="footer-wa" href="https://wa.me/60XXXXXXXXX" target="_blank">💬 WhatsApp</a>
+</footer>
+<script>function toggleTheme(){const h=document.documentElement;const d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('themeBtn').textContent=d?'🌙':'☀️';}</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Why Your Business Needs a Custom Website — VibeHire Blog</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+[data-theme="light"]{--bg:#f7f5f0;--bg2:#ffffff;--bg3:#f0ede6;--surface:#ffffff;--surface2:#f7f5f0;--border:#e8e4dc;--text:#1a1814;--text2:#4a4640;--muted:#9a948a;--accent:#2d7a4f;--accent-light:#e8f5ee;--accent2:#c8861a;--accent2-light:#fdf3e3;--nav-bg:rgba(247,245,240,0.92);--shadow:0 2px 20px rgba(0,0,0,0.08);--shadow-lg:0 8px 40px rgba(0,0,0,0.12);}
+[data-theme="dark"]{--bg:#0f0f0d;--bg2:#161612;--bg3:#1c1c18;--surface:#1c1c18;--surface2:#242420;--border:#2e2e28;--text:#f0ede6;--text2:#b8b4ac;--muted:#6a6660;--accent:#4aaa72;--accent-light:#0f2a1a;--accent2:#e09a30;--accent2-light:#2a1e08;--nav-bg:rgba(15,15,13,0.92);--shadow:0 2px 20px rgba(0,0,0,0.3);--shadow-lg:0 8px 40px rgba(0,0,0,0.4);}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;transition:background 0.4s,color 0.4s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:var(--nav-bg);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.35rem;color:var(--text);text-decoration:none;}
+.nav-logo span{color:var(--accent);}
+.nav-back{color:var(--text2);font-size:0.85rem;font-weight:500;text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--accent);}
+.nav-right{display:flex;align-items:center;gap:0.75rem;}
+.theme-toggle{width:38px;height:38px;border-radius:50%;background:var(--surface2);border:1px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;}
+.nav-cta{background:var(--accent);color:#fff;font-weight:600;font-size:0.85rem;padding:0.55rem 1.3rem;border-radius:100px;text-decoration:none;}
+.blog-hero{padding:8rem 5% 3rem;max-width:780px;}
+.blog-cat{display:inline-flex;align-items:center;gap:0.5rem;background:var(--accent-light);color:var(--accent);font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.5rem;border:1px solid var(--accent)25;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.2rem;color:var(--text);}
+.blog-meta{display:flex;align-items:center;gap:1rem;font-size:0.85rem;color:var(--muted);margin-bottom:2rem;flex-wrap:wrap;}
+.blog-cover{width:100%;aspect-ratio:16/7;overflow:hidden;}
+.blog-cover img{width:100%;height:100%;object-fit:cover;}
+.blog-body{padding:4rem 5%;display:grid;grid-template-columns:1fr 280px;gap:4rem;max-width:1100px;}
+@media(max-width:860px){.blog-body{grid-template-columns:1fr;gap:2.5rem;}}
+.article h2{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:800;letter-spacing:-0.02em;margin:2.5rem 0 0.8rem;color:var(--text);}
+.article h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin:1.8rem 0 0.6rem;color:var(--text);}
+.article p{color:var(--text2);font-size:1rem;line-height:1.85;margin-bottom:1.2rem;}
+.article p strong{color:var(--text);font-weight:600;}
+.article ul,.article ol{margin:0 0 1.2rem 1.2rem;}
+.article ul li,.article ol li{color:var(--text2);font-size:0.97rem;line-height:1.75;margin-bottom:0.5rem;}
+.article blockquote{border-left:3px solid var(--accent);padding:1rem 1.5rem;margin:1.5rem 0;background:var(--accent-light);border-radius:0 12px 12px 0;}
+.article blockquote p{color:var(--text);font-style:italic;font-size:1.05rem;margin:0;}
+.article hr{border:none;border-top:1px solid var(--border);margin:2.5rem 0;}
+.highlight-box{background:var(--accent2-light);border:1px solid var(--accent2)25;border-radius:16px;padding:1.5rem 1.8rem;margin:1.5rem 0;}
+.highlight-box h4{font-weight:700;color:var(--accent2);margin-bottom:0.5rem;font-size:0.9rem;letter-spacing:0.04em;text-transform:uppercase;}
+.highlight-box p{color:var(--text2);font-size:0.92rem;margin:0;line-height:1.65;}
+.reasons-grid{display:grid;grid-template-columns:1fr;gap:0.85rem;margin:1.5rem 0;}
+.reason-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.2rem 1.5rem;display:flex;align-items:flex-start;gap:1rem;}
+.reason-num{width:32px;height:32px;border-radius:8px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:0.9rem;flex-shrink:0;font-family:'Playfair Display',serif;}
+.reason-info h4{font-weight:700;font-size:0.95rem;color:var(--text);margin-bottom:0.3rem;}
+.reason-info p{font-size:0.88rem;color:var(--text2);line-height:1.5;margin:0;}
+.blog-sidebar{position:sticky;top:6rem;align-self:start;}
+.sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:1.5rem;box-shadow:var(--shadow);margin-bottom:1.2rem;}
+.sidebar-card h4{font-family:'Playfair Display',serif;font-weight:800;font-size:0.95rem;color:var(--text);margin-bottom:0.8rem;}
+.toc-list{list-style:none;}
+.toc-list li{padding:0.4rem 0;border-bottom:1px solid var(--border);}
+.toc-list li:last-child{border-bottom:none;}
+.toc-list a{color:var(--text2);font-size:0.85rem;text-decoration:none;transition:color 0.2s;}
+.toc-list a:hover{color:var(--accent);}
+.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;background:var(--accent);color:#fff;font-weight:700;font-size:0.88rem;padding:0.8rem 1.4rem;border-radius:100px;text-decoration:none;width:100%;margin-top:0.5rem;}
+.related{padding:3rem 5% 5rem;}
+.related h3{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:1.5rem;}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;transition:transform 0.2s,box-shadow 0.2s;box-shadow:var(--shadow);}
+.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.related-thumb{aspect-ratio:16/9;overflow:hidden;}
+.related-thumb img{width:100%;height:100%;object-fit:cover;}
+.related-info{padding:1rem 1.2rem;}
+.related-cat{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:0.4rem;}
+.related-info h4{font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:800;color:var(--text);line-height:1.3;}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 5%;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.footer-logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1rem;color:var(--text);}
+.footer-logo span{color:var(--accent);}
+footer p{color:var(--muted);font-size:0.82rem;}
+.footer-wa{display:inline-flex;align-items:center;gap:0.5rem;background:#e8f8ef;border:1px solid #25D36640;color:#25D366;font-size:0.85rem;font-weight:600;padding:0.45rem 1rem;border-radius:100px;text-decoration:none;}
+[data-theme="dark"] .footer-wa{background:#0d2b1a;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.blog-hero>*{animation:fadeUp 0.6s ease both;}
+.blog-hero>*:nth-child(1){animation-delay:0.05s;}.blog-hero>*:nth-child(2){animation-delay:0.12s;}.blog-hero>*:nth-child(3){animation-delay:0.2s;}
+@media(max-width:600px){nav{padding:0.85rem 4%;}.nav-cta{display:none;}.blog-hero{padding:5.5rem 4% 2.5rem;}.blog-body{padding:3rem 4%;}.related{padding:2rem 4% 3.5rem;}footer{flex-direction:column;padding:1.5rem 4%;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><span>Vibe</span>Hire</a>
+  <a class="nav-back" href="index.html#blog">← Back to Blog</a>
+  <div class="nav-right">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">🌙</button>
+    <a class="nav-cta" href="https://wa.me/60XXXXXXXXX?text=Hi%20VibeHire!" target="_blank">💬 Work With Us</a>
+  </div>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-cat">🌐 Website</div>
+  <h1>Why Your Business Needs a Custom Website — Not a Template</h1>
+  <div class="blog-meta">
+    <span>📅 2025</span>
+    <span>⏱ 5 min read</span>
+    <span>✍️ VibeHire Editorial</span>
+  </div>
+</div>
+<div class="blog-cover"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1400&q=80" alt="Custom Website Development"/></div>
+
+<div class="blog-body">
+  <article class="article">
+    <p>When you first start a business, getting a website up quickly makes sense. You grab a WordPress theme, install a few plugins, and publish something that looks decent enough. Job done — at least for now.</p>
+    <p>The problem is that "for now" has a habit of becoming "forever." And the website that was good enough to launch quickly becomes a liability as your business grows.</p>
+
+    <h2>What's Actually Wrong With Templates</h2>
+    <p>Templates aren't bad products. They're just built for everyone — which means they're built for no one in particular. When you use a template, you're working within constraints that were designed for a fictional average business, not yours.</p>
+    <p>Here's what that looks like in practice:</p>
+    <ul>
+      <li>You spend hours trying to make the template fit your brand — adjusting colours, fonts, layouts — and it still doesn't quite look right.</li>
+      <li>Your competitor in the same industry uses the same template. Your websites look like siblings.</li>
+      <li>The template was built for easy setup, not for speed. It loads slowly because it carries code for dozens of features you don't use.</li>
+      <li>Every time WordPress or the theme updates, something breaks. Now you need to fix it — or pay someone to.</li>
+      <li>You want to add something specific — a custom section, a unique interaction, a specific layout — and the template won't let you without hacking around it.</li>
+    </ul>
+
+    <blockquote>
+      <p>A template gives you a website. A custom build gives you your website.</p>
+    </blockquote>
+
+    <h2>Five Reasons Custom Code Is the Smarter Move</h2>
+
+    <div class="reasons-grid">
+      <div class="reason-card">
+        <div class="reason-num">1</div>
+        <div class="reason-info">
+          <h4>It's Actually Yours</h4>
+          <p>With a custom-coded website, you receive the full source files — HTML, CSS, and any supporting assets. There's no subscription, no plugin dependency, no platform lock-in. If you want to move hosts, switch developers, or modify the site yourself, you can. It belongs to you completely.</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">2</div>
+        <div class="reason-info">
+          <h4>It Loads Faster</h4>
+          <p>WordPress sites carry enormous amounts of code that you don't need — plugin libraries, theme frameworks, database queries — all loading every time someone visits your site. A custom-coded site contains only what it needs. Pages load faster, and faster pages rank better on Google and convert better with users.</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">3</div>
+        <div class="reason-info">
+          <h4>Nobody Else Looks Like You</h4>
+          <p>When VibeHire builds your website, we start from a blank canvas and design specifically around your brand, your audience, and your goals. The result is a site that looks and feels distinctly yours — not a variation of something thousands of other businesses are already using.</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">4</div>
+        <div class="reason-info">
+          <h4>It's More Secure</h4>
+          <p>WordPress and its plugins are among the most commonly hacked platforms on the internet — not because they're inherently insecure, but because they're so widely used that attackers specifically target known vulnerabilities. A custom-coded site doesn't have those known attack surfaces.</p>
+        </div>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">5</div>
+        <div class="reason-info">
+          <h4>You Have a Long-Term Partner</h4>
+          <p>When your website is custom-built by VibeHire, you're not on your own when something needs to change. We know the code — because we wrote it. Updates, additions, and modifications are straightforward because there's no mystery about how the site was built.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>But Isn't Custom More Expensive?</h2>
+    <p>The upfront cost of a custom website is typically higher than buying a premium WordPress theme. That's true. But it's worth looking at the full picture.</p>
+    <p>A WordPress setup comes with ongoing costs that add up quickly — premium theme fees, plugin subscriptions, hosting that can handle the load, developer fees when things break, and the time you spend managing it yourself. Over two to three years, the total cost of a "cheap" WordPress site often exceeds the cost of a custom build.</p>
+    <p>VibeHire's website packages start from RM1,000 — which includes two design mockups (desktop and mobile), up to three pages or sections, three rounds of revisions, and full source code ownership. No ongoing platform fees. No subscriptions. No lock-in.</p>
+
+    <h2>When a Template Is Actually Fine</h2>
+    <p>To be fair — there are situations where a template is the right choice. If you need something live within 24 hours and don't have a budget at all, a free WordPress or Carrd template gets you online fast. That's a legitimate use case for early-stage businesses testing an idea.</p>
+    <p>But once your business is established, once you're investing in marketing and trying to build a proper brand presence — your website should reflect the quality of what you offer. A template that looks like every other business in your industry doesn't do that.</p>
+
+    <h2>What the Right Website Actually Does for Your Business</h2>
+    <p>A well-built website isn't just a digital business card. It's a sales tool that works 24 hours a day. It's the place people land after watching your video on TikTok, after seeing your ad on Instagram, after getting a recommendation from a friend. It's where first impressions happen.</p>
+    <p>If your website looks generic, loads slowly, or doesn't clearly communicate what you do and why it matters — you're losing customers at the exact moment they're most interested in you.</p>
+    <p>A custom-coded website — built specifically around your brand, your audience, and your goals — turns that moment into a conversion instead of a lost opportunity.</p>
+
+    <div class="highlight-box">
+      <h4>🌐 Ready to Build Something Properly?</h4>
+      <p>VibeHire builds custom-coded websites for Malaysian businesses starting from RM1,000. Two design mockups, desktop and mobile, three revisions included, full ownership on delivery. No WordPress, no templates, no ongoing fees to us.</p>
+    </div>
+
+  </article>
+
+  <aside class="blog-sidebar">
+    <div class="sidebar-card">
+      <h4>In This Article</h4>
+      <ul class="toc-list">
+        <li><a href="#">What's Wrong With Templates</a></li>
+        <li><a href="#">5 Reasons Custom Wins</a></li>
+        <li><a href="#">Is It More Expensive?</a></li>
+        <li><a href="#">When Templates Are Fine</a></li>
+        <li><a href="#">What a Good Website Does</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Build Your Website</h4>
+      <p style="font-size:0.85rem;color:var(--text2);line-height:1.6;margin-bottom:0.5rem;">Custom-coded websites starting from RM1,000. No templates. Full ownership on delivery.</p>
+      <a class="btn-primary" href="website.html">See Full Details →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Also Need Video?</h4>
+      <p style="font-size:0.85rem;color:var(--text2);line-height:1.6;margin-bottom:0.75rem;">Most of our website clients also get video content. See how they work together.</p>
+      <a href="video.html" style="font-size:0.85rem;color:var(--accent);font-weight:700;text-decoration:none;">AI Video Production →</a>
+    </div>
+  </aside>
+</div>
+
+<div class="related">
+  <h3>More From the Blog</h3>
+  <div class="related-grid">
+    <a class="related-card" href="blog-will-writing.html">
+      <div class="related-thumb"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Will Writing"/></div>
+      <div class="related-info"><div class="related-cat">Financial Literacy</div><h4>Why Every Malaysian Needs a Will — And Why Most Don't Have One</h4></div>
+    </a>
+    <a class="related-card" href="blog-ai-video.html">
+      <div class="related-thumb"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80" alt="AI Video"/></div>
+      <div class="related-info"><div class="related-cat">AI Video</div><h4>How AI Video Production Is Changing the Game for Small Businesses</h4></div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo"><span>Vibe</span>Hire Solutions Sdn. Bhd.</div>
+  <p>© 2025 VibeHire Solutions Sdn. Bhd. · Made in Malaysia 🇲🇾</p>
+  <a class="footer-wa" href="https://wa.me/60XXXXXXXXX" target="_blank">💬 WhatsApp</a>
+</footer>
+<script>function toggleTheme(){const h=document.documentElement;const d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');document.getElementById('themeBtn').textContent=d?'🌙':'☀️';}</script>
+</body>
+</html>
