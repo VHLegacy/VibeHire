@@ -177,6 +177,7 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);fon
 
 /* FOOTER */
 footer{background:var(--bg2);border-top:1px solid var(--border);padding:2.5rem 5%;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+footer>div{flex-shrink:0;}
 .footer-logo{font-family:'Playfair Display',serif;font-weight:800;font-size:1.05rem;color:var(--text);}
 .footer-logo span{color:var(--accent);}
 footer p{color:var(--muted);font-size:0.82rem;}
@@ -520,29 +521,6 @@ footer p{color:var(--muted);font-size:0.82rem;}
   </div>
 </section>
 
-<!-- EVENTS -->
-<section class="alt-bg2" id="events">
-  <div class="sec-label reveal">Events</div>
-  <h2 class="reveal">Come Meet Us.</h2>
-  <p class="sec-sub reveal">Workshops, talks, and community events — come find us in person and see what VibeHire is building.</p>
-  <div class="events-list reveal">
-    <div class="event-row">
-      <div class="event-date"><div class="day">15</div><div class="mon">Jun</div></div>
-      <div class="event-info"><h4>VibeHire Launch — AI Video Workshop for MSMEs</h4><p>Kuala Lumpur · Free introductory workshop on AI video production for local businesses</p></div>
-      <div class="event-tag upcoming">Upcoming</div>
-    </div>
-    <div class="event-row">
-      <div class="event-date"><div class="day">22</div><div class="mon">Jun</div></div>
-      <div class="event-info"><h4>Digital Marketing Meetup KL — Guest Presenter</h4><p>Bangsar South · VibeHire presenting on affordable digital solutions for SMEs</p></div>
-      <div class="event-tag upcoming">Upcoming</div>
-    </div>
-    <div class="event-row">
-      <div class="event-date"><div class="day">10</div><div class="mon">May</div></div>
-      <div class="event-info"><h4>SME Digitalisation Forum 2025</h4><p>KLCC Convention Centre · Panel discussion on affordable digital tools for MSMEs</p></div>
-      <div class="event-tag past">Past</div>
-    </div>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section id="faq">
@@ -584,7 +562,7 @@ footer p{color:var(--muted);font-size:0.82rem;}
 
 <footer>
   <div style="display:flex;flex-direction:column;gap:0.3rem;">
-    <img src="VH Logo_Horizontal.png" alt="VibeHire Solutions" style="height:28px;width:auto;display:block;filter:var(--logo-filter,none);"/>
+    <img src="VH Logo_Horizontal.png" alt="VibeHire Solutions" style="height:32px;width:auto;max-width:180px;display:block;flex-shrink:0;"/>
     <span style="font-size:0.72rem;color:var(--muted);font-weight:600;letter-spacing:0.04em;">VIBEHIRE SOLUTIONS SDN. BHD.</span>
     <span style="font-size:0.7rem;color:var(--muted);">202501032208 (1633620-U)</span>
   </div>
